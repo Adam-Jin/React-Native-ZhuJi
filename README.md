@@ -1,5 +1,5 @@
 # React-Native-ZhuJi 
-TMS Business Project For React-Native-ZhuJi  Creating
+Project For React-Native-ZhuJi  Creating
 
 # install
 npm install && react-native link 
