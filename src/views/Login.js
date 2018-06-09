@@ -5,14 +5,10 @@ import {
     View,
     StyleSheet,
     Dimensions,
-    Image,
-    Button,
-    Alert,
-    Platform,
+    ImageBackground
 } from "react-native";
 import { connect } from "dva/mobile";
-import { Actions } from "react-native-router-flux";
-
+import Widget from '../widgets';
 
 const { width, height } = Dimensions.get("window");
 
@@ -39,9 +35,9 @@ class Login extends React.Component {
      */
     render() {
         return (
-            <View>
-                <Text>11111</Text>
-            </View>
+            <Widget.Background>
+                <Text>QQQQ</Text>
+            </Widget.Background>
         );
     }
 }
