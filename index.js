@@ -1,15 +1,13 @@
 /* system import */
-import React, { Component } from 'react';
-import {
-  AppRegistry
-}                           from 'react-native';
-import dva, { connect }     from 'dva/mobile';
+import React from 'react';
+import { AppRegistry } from 'react-native';
+import dva from 'dva/mobile';
 
 /* business import */
-import Login      from './src/module/Login';
+import Login from './src/models/Login';
 
 /* router import */
-import Router from './src/router/index';
+import Router from './src/route/index';
 
 const app = dva();
 

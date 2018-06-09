@@ -1,21 +1,15 @@
 import React from 'react';
-import { connect } from 'dva/mobile';
 import {
     Scene,
     Router,
     Actions,
-    Drawer
 } from 'react-native-router-flux';
 import {
     Dimensions,
     StyleSheet,
-    TouchableWithoutFeedback,
     View,
-    Text,
     TouchableOpacity,
-    Image,
-    StatusBar,
-    Platform,
+    StatusBar
 } from 'react-native'
 /* current img loading */
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -25,7 +19,7 @@ const { width, height } = Dimensions.get("window");
 
 /* page init here */
 
-import Login from '../view/Login';
+import Login from '../views/Login';
 
 
 import SplashScreen from 'react-native-splash-screen';
@@ -67,23 +61,17 @@ const RouterComponent = ({ dispatch }) => {
 
     return (
         <View style={{ flex: 1 }}>
-            <StatusBar barStyle="light-content" />
+            <StatusBar barStyle="dark-content" />
             <Router backAndroidHandler={onBackPress}>
-
                 <Scene key="main" navigationBarStyle={{ backgroundColor: '#2E4050' }} >
                     <Scene
-                        // initial
+                        initial
                         key="login"
                         title="登录"
-                        // hideNavBar={true}
-                        navigationBarStyle={{ backgroundColor: '#2E4050' }}
-                        titleStyle={[styles.headerWithTitle, { color: "#FFFFFF" }]}
+                        hideNavBar={true}
                         component={Login}
-                        renderLeftButton={backLoginButton}
-                        rightButtonTextStyle={styles.headerRightTitle}
                         onEnter={onEnterScreen}
                     />
-
                 </Scene>
             </Router>
         </View>
